@@ -1,5 +1,5 @@
 from django.db import models
-
+from cloudinary.models import CloudinaryField
 # Create your models here.
 
 
@@ -19,6 +19,7 @@ class Project(models.Model):
     description = models.TextField()
     category = models.ForeignKey(Category, related_name='project', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='images')
+    video = CloudinaryField(resource_type='video')
 
     def __str__(self):
         return self.title        

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'portfolio',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,12 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import cloudinary
+
+cloudinary.config(
+    cloud_name = 'kimizzy',
+    api_key = '637376417854757',
+    api_secret = 'Lcqaf02peIkUN4A_jOtqv_6X3pc',
+    secure = True,
+)
