@@ -7,4 +7,5 @@ app_name = 'portfolio'
 urlpatterns = [ 
     path('', views.home, name='home'),
     path('portfolio/', views.portfolio, name='portfolio'),
+    path('portfolio_detail/<int:id>/', views.portfolio_detail, name='portfolio_detail'),
 ]
