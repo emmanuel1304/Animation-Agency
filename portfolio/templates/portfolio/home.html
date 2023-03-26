@@ -8,7 +8,7 @@
     <meta name="keywords" content="Videograph, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Papianim8</title>
+    <title>Videograph | Template</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/elegant-icons.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 </head>
@@ -188,32 +188,13 @@
     <section class="work">
         <div class="work__gallery">
             <div class="grid-sizer"></div>
+            {% for project in project %}
+            <div class="work__item small__item set-bg" data-setbg="{{project.image.url}}">
+                <a href="{{project.video.url}}" class="play-btn video-popup"><i
+                        class="fa fa-play"></i></a>
+            </div>
+            {% endfor %}
             
-            <div class="work__item small__item set-bg" data-setbg="{% static 'img/work/work-2.jpg' %}">
-                <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                        class="fa fa-play"></i></a>
-            </div>
-            <div class="work__item small__item set-bg" data-setbg="{% static 'img/work/work-3.jpg' %}">
-                <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                        class="fa fa-play"></i></a>
-            </div>
-            
-            <div class="work__item small__item set-bg" data-setbg="{% static 'img/work/work-5.jpg' %}">
-                <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                        class="fa fa-play"></i></a>
-            </div>
-            <div class="work__item small__item set-bg" data-setbg="{% static 'img/work/work-6.jpg' %}">
-                <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                        class="fa fa-play"></i></a>
-            </div>
-            <div class="work__item small__item set-bg" data-setbg="{% static 'img/work/work-6.jpg' %}">
-                <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                        class="fa fa-play"></i></a>
-            </div>
-            <div class="work__item small__item set-bg" data-setbg="{% static 'img/work/work-6.jpg' %}">
-                <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                        class="fa fa-play"></i></a>
-            </div>
             
         </div>
     </section>

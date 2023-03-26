@@ -110,19 +110,24 @@
             
             <div class="row portfolio__gallery">
             
-            {% for subcategory in category.subcategory.all %}    
+            {% for subcategory in category.subcategory.all %} 
+              
                 <div class="col-lg-4 col-md-6 col-sm-6 mix branding">
+                    
                     <div class="portfolio__item">
                         <div class="portfolio__item__video set-bg" data-setbg="{{subcategory.image.url}}">
                             <a href="" class=""><i
                                     class=""></i></a>
                         </div>
                         <div class="portfolio__item__text">
-                            <h4>{{subcategory.name}}</h4>
+                            <a href="{% url 'portfolio:sub_category_detail' subcategory.id %}"><h4>{{subcategory.name}}</h4></a>
                             
                         </div>
                     </div>
+                    </a>
+                    
                 </div>
+        
             {% endfor %}    
                 
                 
