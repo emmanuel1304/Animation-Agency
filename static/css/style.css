@@ -495,7 +495,7 @@ ol {
   transition: all, 0.3s;
 }
 .hero__text h2 {
-  color: #ffffff;
+  color: black;
   font-size: 60px;
   font-weight: 700;
   line-height: 70px;
