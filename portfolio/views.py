@@ -19,7 +19,7 @@ def portfolio_detail(request, id):
     return render(request, 'portfolio/portfolio_detail.html', context)    
 
 
-def sub_category_detail(request, id):
-    sub_category = SubCategory.objects.get(id=id)
-    context = {'sub_category': sub_category}
-    return render(request, 'portfolio/sub_category_detail.html', context)
+#def sub_category_detail(request, id):
+ #   sub_category = SubCategory.objects.get(id=id)
+  #  context = {'sub_category': sub_category}
+   # return render(request, 'portfolio/sub_category_detail.html', context)

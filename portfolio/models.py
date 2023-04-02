@@ -27,7 +27,7 @@ class SubCategory(models.Model):
 class Project(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
-    category = models.ForeignKey(SubCategory, related_name='project', on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, related_name='project', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='images')
     video = CloudinaryField(resource_type='video')
 
